@@ -1,27 +1,72 @@
-// Navbar scroll effect
+// register plugin
 
-window.addEventListener("scroll", function(){
+gsap.registerPlugin(ScrollTrigger);
 
-    let navbar = document.querySelector(".navbar");
-    
-    if(window.scrollY > 50){
-    navbar.style.background = "#0B192C";
-    }
-    else{
-    navbar.style.background = "rgba(0,0,0,0.7)";
-    }
-    
-    });
 
-window.addEventListener("scroll", () => {
+/* ---------- HERO ANIMATION ---------- */
 
-const navbar = document.querySelector(".navbar");
+gsap.from(".hero h1",{
 
-if(window.scrollY > 40){
-navbar.style.background = "rgba(11,25,44,0.75)";
+y:60,
+opacity:0,
+duration:1,
+ease:"power3.out"
+
+});
+
+
+gsap.from(".hero p",{
+
+y:40,
+opacity:0,
+duration:1,
+delay:0.3,
+ease:"power3.out"
+
+});
+
+
+gsap.from(".cta .btn",{
+
+y:30,
+opacity:0,
+duration:0.8,
+stagger:0.2,
+delay:0.5,
+ease:"power2.out"
+
+});
+
+
+/* ---------- NAVBAR FADE ---------- */
+
+gsap.from(".navbar",{
+
+y:-40,
+opacity:0,
+duration:1,
+ease:"power2.out"
+
+});
+
+
+/* ---------- SCROLL ANIMATION FOR SECTIONS ---------- */
+
+gsap.utils.toArray(".container").forEach(section => {
+
+gsap.from(section,{
+
+opacity:0,
+y:80,
+
+scrollTrigger:{
+
+trigger:section,
+start:"top 85%",
+toggleActions:"play none none none"
+
 }
-else{
-navbar.style.background = "rgba(11,25,44,0.35)";
-}
+
+});
 
 });
