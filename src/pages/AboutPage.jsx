@@ -95,7 +95,7 @@ export default function AboutPage() {
           <p className="section-subtitle">A comprehensive, highly scalable simulation environment mirroring real-world industrial control systems and IoT networks.</p>
           <div className="about-platform-grid">
             <div className="about-platform-img">
-              <img src="/photos/lab.jpeg" alt="CyberRange Platform" style={{ width: '100%', borderRadius: 12 }} />
+              <img src="/photos/lab.png" alt="CyberRange Platform" style={{ width: '100%', borderRadius: 12 }} />
             </div>
             <div className="about-platform-terminal">
               <TerminalBlock />
