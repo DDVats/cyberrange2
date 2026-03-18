@@ -6,18 +6,14 @@ import './CollaboratorsPage.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const collaborators = [
-  { name: 'SecureNet Labs', type: 'Industry', desc: 'Leading provider of enterprise network security solutions.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=SecureNet' },
-  { name: 'IIT Bombay Cyber Cell', type: 'Academia', desc: 'Premier academic research cell focusing on cryptography and protocol security.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=IIT+B' },
-  { name: 'DRDO CyberSec Division', type: 'Government', desc: 'National defense research unit specializing in critical infrastructure protection.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=DRDO' },
-  { name: 'Infosys Security Research', type: 'Industry', desc: 'Applied R&D lab focusing on AI-driven threat detection and analysis.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Infosys' },
-  { name: 'CyberPeace Foundation', type: 'NGO', desc: 'Award-winning civil society organization promoting digital peace and cyber hygiene.', link: '#', logo: 'https://placehold.co/120x60/00ff41/000000?text=CyberPeace' },
-  { name: 'ETH Zurich InfoSec', type: 'Academia', desc: 'Department of Computer Science focusing on verifiable security and privacy.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=ETH' },
-  { name: 'CISA Partner Network', type: 'Government', desc: 'Information sharing and analysis center for proactive threat mitigation.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=CISA' },
-  { name: 'Palo Alto Networks', type: 'Industry', desc: 'Collaborating on next-generation firewall technologies and malware sandboxing.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Palo+Alto' },
-  { name: 'OWASP Foundation', type: 'NGO', desc: 'Open-source software community fostering secure development practices.', link: '#', logo: 'https://placehold.co/120x60/00ff41/000000?text=OWASP' },
-  { name: 'ZHAW Cyber Defence Lab', type: 'Academia', desc: 'Applied sciences university focusing on cyber-physical systems security.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=ZHAW' },
-  { name: 'NTRO Cyber Branch', type: 'Government', desc: 'Technical intelligence agency focused on securing national cyber space.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=NTRO' },
-  { name: 'CrowdStrike Intel', type: 'Industry', desc: 'Elite threat intelligence team collaborating on adversary tracking.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=CrowdStrike' },
+  { name: 'Organization 01', type: 'Industry', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Org+01' },
+  { name: 'Organization 02', type: 'Academia', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=Org+02' },
+  { name: 'Organization 03', type: 'Government', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=Org+03' },
+  { name: 'Organization 04', type: 'Industry', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Org+04' },
+  { name: 'Organization 05', type: 'NGO', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/00ff41/000000?text=Org+05' },
+  { name: 'Organization 06', type: 'Academia', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=Org+06' },
+  { name: 'Organization 07', type: 'Government', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=Org+07' },
+  { name: 'Organization 08', type: 'Industry', desc: 'Placeholder description for a partner organization.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Org+08' },
 ]
 
 export default function CollaboratorsPage() {

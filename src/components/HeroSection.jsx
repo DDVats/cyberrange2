@@ -24,7 +24,7 @@ export default function HeroSection() {
         .from('.hero-title .line', { opacity: 0, y: 40, stagger: 0.12, duration: 0.6 }, '-=0.2')
         .from('.hero-sub', { opacity: 0, y: 20, duration: 0.5 }, '-=0.3')
         .from('.hero-btn', { opacity: 0, scale: 0.8, stagger: 0.1, duration: 0.4 }, '-=0.2')
-        .from('.stats-bar', { opacity: 0, y: 30, duration: 0.5 }, '-=0.1')
+        .from('.stats-bar, .stats-stack', { opacity: 0, y: 30, duration: 0.5 }, '-=0.1')
 
       // Counter animation for stats
       const counters = heroRef.current?.querySelectorAll('.stat-value[data-count]')
@@ -68,6 +68,25 @@ export default function HeroSection() {
         <p className="hero-sub">
           India's premier cybersecurity research lab — bridging academia and industry through advanced Cyberange training, threat intelligence, and smart city security research.
         </p>
+
+        {isTabletOrMobile && (
+          <div className="stats-stack" aria-label="Lab stats">
+            <div className="stats-stack__inner">
+              {stats.map((s, i) => (
+                <div key={i} className="stat stat--stack">
+                  <span
+                    className="stat-value"
+                    data-count={s.value}
+                    data-suffix={s.suffix}
+                  >
+                    {s.display || '0' + s.suffix}
+                  </span>
+                  <span className="stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="hero__btns">
           <Link to="/opportunities" className="btn btn-primary hero-btn">Join the Lab</Link>

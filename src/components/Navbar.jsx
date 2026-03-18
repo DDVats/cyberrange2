@@ -2,19 +2,22 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Training', path: '/training' },
+const dropdownLinks = [
   { name: 'Research', path: '/research' },
-  { name: 'CyberRange', path: '/cyberrange' },
-  { name: 'Team', path: '/team' },
-  { name: 'Collaborators', path: '/collaborators' },
-  { name: 'Opportunities', path: '/opportunities' },
-  { name: 'Events', path: '/events' },
   { name: 'Publications', path: '/publications' },
   { name: 'Open Source', path: '/opensource' },
+]
+
+// Order in navbar:
+// Home, Cyberange, Events, Services & Training, Research & Resources, Team, Collaborations
+const navItems = [
+  { type: 'link', name: 'Home', path: '/' },
+  { type: 'link', name: 'Cyberange', path: '/cyberrange' },
+  { type: 'link', name: 'Events', path: '/events' },
+  { type: 'menu', name: 'Services & Training', items: dropdownLinks },
+  { type: 'menu', name: 'Research & Resources', items: dropdownLinks },
+  { type: 'link', name: 'Team', path: '/team' },
+  { type: 'link', name: 'Collaborations', path: '/collaborators' },
 ]
 
 export default function Navbar() {
@@ -47,11 +50,6 @@ export default function Navbar() {
     setMobileOpen(false)
   }, [location.pathname])
 
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [mobileOpen])
-
   return (
     <>
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
@@ -65,21 +63,35 @@ export default function Navbar() {
           </Link>
 
           <nav className="navbar__nav">
-            {navLinks.map(link => {
-              const isActive = location.pathname === link.path
+            {navItems.map(item => {
+              if (item.type === 'menu') {
+                return (
+                  <div key={item.name} className="navbar__dropdown">
+                    <button className="navbar__link navbar__dropdown-trigger" type="button">
+                      {item.name}
+                      <span className="navbar__caret" aria-hidden="true">▾</span>
+                    </button>
+                    <div className="navbar__dropdown-panel">
+                      {item.items.map(sub => (
+                        <Link key={sub.name} to={sub.path} className="navbar__dropdown-link">
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
+
+              const isActive = location.pathname === item.path
               return (
-                <Link key={link.name} to={link.path} className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}>
-                  {link.name}
+                <Link key={item.name} to={item.path} className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}>
+                  {item.name}
                 </Link>
               )
             })}
-<<<<<<< HEAD
-=======
-            <Link to="/apply" className="btn btn-primary navbar__contact-btn">Apply Now</Link>
->>>>>>> ceae68e5f21f4ca8e70d9cb4d09526402a45140d
           </nav>
 
-          <Link to="/contact" className="btn btn-primary navbar__contact-btn">Get in Contact</Link>
+          <Link to="/opportunities" className="btn btn-primary navbar__contact-btn">Apply Now</Link>
 
           <button className={`navbar__hamburger ${mobileOpen ? 'navbar__hamburger--open' : ''}`} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
             <span /><span /><span />
@@ -92,15 +104,29 @@ export default function Navbar() {
         <div className="mobile-menu__backdrop" onClick={() => setMobileOpen(false)} />
         <div className="mobile-menu__panel">
           <nav className="mobile-menu__nav">
-            {navLinks.map(link => {
-              const isActive = location.pathname === link.path
+            {navItems.map(item => {
+              if (item.type === 'menu') {
+                return (
+                  <div key={item.name} className="mobile-menu__group">
+                    <div className="mobile-menu__group-title">{item.name}</div>
+                    {item.items.map(sub => (
+                      <Link key={sub.name} to={sub.path} className="mobile-menu__link mobile-menu__sublink">
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )
+              }
+
+              const isActive = location.pathname === item.path
               return (
-                <Link key={link.name} to={link.path} className={`mobile-menu__link ${isActive ? 'mobile-menu__link--active' : ''}`}>
-                  {link.name}
+                <Link key={item.name} to={item.path} className={`mobile-menu__link ${isActive ? 'mobile-menu__link--active' : ''}`}>
+                  {item.name}
                 </Link>
               )
             })}
-            <Link to="/apply" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Apply Now</Link>
+
+            <Link to="/opportunities" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Apply Now</Link>
           </nav>
         </div>
       </div>

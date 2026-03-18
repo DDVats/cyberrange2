@@ -7,29 +7,29 @@ gsap.registerPlugin(ScrollTrigger)
 
 const team = {
   'Faculty Advisory Council': [
-    { name: 'Dr. Manoj Kumar Mishra', role: 'Lab Director', initials: 'MM' },
-    { name: 'Dr. Sandeep Joshi', role: 'Associate Director', initials: 'SJ' },
-    { name: 'Dr. Amandeep Kapoor', role: 'CISO & Advisor', initials: 'AK' },
+    { name: 'Faculty Member 01', role: 'Advisor', initials: 'F1' },
+    { name: 'Faculty Member 02', role: 'Advisor', initials: 'F2' },
+    { name: 'Faculty Member 03', role: 'Advisor', initials: 'F3' },
   ],
   'Research Wing': [
-    { name: 'Ananya Iyer', role: 'Ph.D — Smart City IDS', initials: 'AI' },
-    { name: 'Rahul Verma', role: 'M.Tech — OT Security', initials: 'RV' },
-    { name: 'Priya Sharma', role: 'Ph.D — Post-Quantum Crypto', initials: 'PS' },
+    { name: 'Research Member 01', role: 'Researcher', initials: 'R1' },
+    { name: 'Research Member 02', role: 'Researcher', initials: 'R2' },
+    { name: 'Research Member 03', role: 'Researcher', initials: 'R3' },
   ],
   'Technical Wing': [
-    { name: 'Atul Kumar', role: 'Security Architect', initials: 'AK' },
-    { name: 'Siddharth Simharaju', role: 'Red Team Specialist', initials: 'SS' },
-    { name: 'Arjun Mehta', role: 'Team Lead — Red Team', initials: 'AM' },
-    { name: 'Sneha Reddy', role: 'Blue Team Lead', initials: 'SR' },
-    { name: 'Karan Patel', role: 'CTF Captain', initials: 'KP' },
-    { name: 'Aseem Shrey', role: 'AppSec Engineer', initials: 'AS' },
+    { name: 'Technical Member 01', role: 'Engineer', initials: 'T1' },
+    { name: 'Technical Member 02', role: 'Engineer', initials: 'T2' },
+    { name: 'Technical Member 03', role: 'Engineer', initials: 'T3' },
+    { name: 'Technical Member 04', role: 'Engineer', initials: 'T4' },
+    { name: 'Technical Member 05', role: 'Engineer', initials: 'T5' },
+    { name: 'Technical Member 06', role: 'Engineer', initials: 'T6' },
   ],
   'Collaborations Wing': [
-    { name: 'Vaibhav Shukla', role: 'Threat Intelligence Lead', initials: 'VS' },
-    { name: 'Sai Rakshit', role: 'SOC Operations Lead', initials: 'SR' },
+    { name: 'Collaboration Member 01', role: 'Partner Liaison', initials: 'C1' },
+    { name: 'Collaboration Member 02', role: 'Partner Liaison', initials: 'C2' },
   ],
   'Management Wing': [
-    { name: 'Diya Nair', role: 'Research Intern', initials: 'DN' },
+    { name: 'Management Member 01', role: 'Operations', initials: 'M1' },
   ],
 }
 
