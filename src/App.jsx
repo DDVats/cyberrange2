@@ -48,12 +48,10 @@ function AnimatedRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/training" element={<TrainingPage />} />
-        <Route path="/apply" element={<ApplyPage />} />
         <Route path="/research" element={<ResearchPage />} />
         <Route path="/cyberrange" element={<CyberangePage />} />
         <Route path="/team" element={<PeoplePage />} />
         <Route path="/collaborators" element={<CollaboratorsPage />} />
-        <Route path="/opportunities" element={<OpportunitiesPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/publications" element={<PublicationsPage />} />
         <Route path="/opensource" element={<OpenSourcePage />} />
