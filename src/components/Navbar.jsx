@@ -2,10 +2,16 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
-const dropdownLinks = [
+const dropdownLinks1 = [
   { name: 'Research', path: '/research' },
   { name: 'Publications', path: '/publications' },
   { name: 'Open Source', path: '/opensource' },
+]
+
+
+const dropdownLinks2 = [
+  { name: 'Our Services', path: '/services' },
+  { name: 'Training Programs', path: '/training' },
 ]
 
 // Order in navbar:
@@ -14,8 +20,8 @@ const navItems = [
   { type: 'link', name: 'Home', path: '/' },
   { type: 'link', name: 'Cyberange', path: '/cyberrange' },
   { type: 'link', name: 'Events', path: '/events' },
-  { type: 'menu', name: 'Services & Training', items: dropdownLinks },
-  { type: 'menu', name: 'Research & Resources', items: dropdownLinks },
+  { type: 'menu', name: 'Services & Training', items: dropdownLinks2 },
+  { type: 'menu', name: 'Research & Resources', items: dropdownLinks1 },
   { type: 'link', name: 'Team', path: '/team' },
   { type: 'link', name: 'Collaborations', path: '/collaborators' },
 ]
