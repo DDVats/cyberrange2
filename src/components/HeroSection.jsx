@@ -60,7 +60,7 @@ export default function HeroSection() {
         </div>
 
         <h1 className="hero-title">
-          <span className="line">Defending</span>
+          <span className="line">Simulating</span>
           <span className="line">Tomorrow's</span>
           <span className="line"><span className="hero-title--accent">Smart Cities</span></span>
         </h1>

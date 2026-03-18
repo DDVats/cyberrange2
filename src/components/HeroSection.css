@@ -132,6 +132,7 @@
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
   .hero__content {
     padding: 110px 0 70px;
     text-align: center;
@@ -145,6 +146,11 @@
     font-size: 15px;
     max-width: 100%;
   }
+=======
+  .hero__content { padding: 120px 0 80px; }
+  .hero-sub { font-size: 16px; }
+  .hero-title { font-size: clamp(32px, 8vw, 48px); }
+>>>>>>> ceae68e5f21f4ca8e70d9cb4d09526402a45140d
   .stats-bar__inner { flex-wrap: wrap; gap: 16px; }
   .stat { min-width: 40%; }
   .hero__btns { justify-content: center; }
@@ -172,4 +178,10 @@
   .stat-value {
     font-size: 30px;
   }
+}
+
+@media (max-width: 480px) {
+  .hero__btns { flex-direction: column; width: 100%; }
+  .hero__btns .btn { width: 100%; justify-content: center; }
+  .stat { min-width: 100%; }
 }

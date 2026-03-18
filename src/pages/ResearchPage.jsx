@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const areas = [
   { id: '01', title: 'Smart City Security', desc: 'Securing urban digital infrastructure — power grids, water systems, and transportation networks — against sophisticated cyber threats.', tags: ['SCADA', 'IoT', 'Zero Trust'] },
-  { id: '02', title: 'Critical Infrastructure Protection', desc: 'Defending national critical infrastructure through advanced threat modeling, vulnerability assessment, and resilience frameworks.', tags: ['ICS', 'NIST', 'Resilience'] },
+  { id: '02', title: 'Critical Infrastructure Protection', desc: 'Simulating national critical infrastructure through advanced threat modeling, vulnerability assessment, and resilience frameworks.', tags: ['ICS', 'NIST', 'Resilience'] },
   { id: '03', title: 'IoT Security', desc: 'Identifying and mitigating vulnerabilities across connected devices, edge computing platforms, and IoT communication protocols.', tags: ['Firmware', 'MQTT', 'BLE'] },
   { id: '04', title: 'AI for Cybersecurity', desc: 'Leveraging machine learning and deep learning for real-time intrusion detection, automated threat hunting, and anomaly detection.', tags: ['ML/DL', 'NLP', 'Adversarial'] },
   { id: '05', title: 'OT / ICS Security', desc: 'Specialized research on securing operational technology environments, including industrial control systems and SCADA networks.', tags: ['Modbus', 'DNP3', 'PLC'] },
