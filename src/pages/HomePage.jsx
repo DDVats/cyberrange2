@@ -8,25 +8,25 @@ import './HomePage.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const collabs = [
-  { name: 'ETH Zurich', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'NTNU', flag: '🇳🇴', country: 'Norway' },
-  { name: 'Uni Lausanne', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'ZHAW', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'THM', flag: '🇩🇪', country: 'Germany' },
-  { name: 'IIT (BHU)', flag: '🇮🇳', country: 'India' },
-  { name: 'IIIT Allahabad', flag: '🇮🇳', country: 'India' },
-  { name: 'NIT Jalandhar', flag: '🇮🇳', country: 'India' },
-  { name: 'IIIT Raipur', flag: '🇮🇳', country: 'India' },
-  { name: 'C3I Hub IIT Kanpur', flag: '🇮🇳', country: 'India' },
+  { name: 'Organization 1', flag: '🌐', country: '—' },
+  { name: 'Organization 2', flag: '🌐', country: '—' },
+  { name: 'Organization 3', flag: '🌐', country: '—' },
+  { name: 'Organization 4', flag: '🌐', country: '—' },
+  { name: 'Organization 5', flag: '🌐', country: '—' },
+  { name: 'Organization 6', flag: '🌐', country: '—' },
+  { name: 'Organization 7', flag: '🌐', country: '—' },
+  { name: 'Organization 8', flag: '🌐', country: '—' },
+  { name: 'Organization 9', flag: '🌐', country: '—' },
+  { name: 'Organization 10', flag: '🌐', country: '—' },
 ]
 
 const mentors = [
-  { name: 'Atul Kumar', role: 'Security Architect', initials: 'AK' },
-  { name: 'Vaibhav Shukla', role: 'Threat Intelligence Lead', initials: 'VS' },
-  { name: 'Dr. Amandeep Kapoor', role: 'CISO & Advisor', initials: 'AK' },
-  { name: 'Siddharth Simharaju', role: 'Red Team Specialist', initials: 'SS' },
-  { name: 'Sai Rakshit', role: 'SOC Operations Lead', initials: 'SR' },
-  { name: 'Aseem Shrey', role: 'AppSec Engineer', initials: 'AS' },
+  { name: 'Mentor Name', role: 'Security Specialist', initials: 'A' },
+  { name: 'Mentor Name', role: 'Threat Analyst', initials: 'B' },
+  { name: 'Mentor Name', role: 'Cybersecurity Advisor', initials: 'C' },
+  { name: 'Mentor Name', role: 'Red Team Expert', initials: 'D' },
+  { name: 'Mentor Name', role: 'SOC Analyst', initials: 'E' },
+  { name: 'Mentor Name', role: 'AppSec Engineer', initials: 'F' },
 ]
 
 const studentActivities = [

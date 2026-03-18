@@ -132,7 +132,7 @@ export default function Navbar() {
               )
             })}
 
-            <Link to="/opportunities" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Apply Now</Link>
+            <Link to="/apply" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Apply Now</Link>
           </nav>
         </div>
       </div>
