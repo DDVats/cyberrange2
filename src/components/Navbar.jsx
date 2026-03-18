@@ -5,8 +5,10 @@ import './Navbar.css'
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Services', path: '/services' },
+  { name: 'Training', path: '/training' },
   { name: 'Research', path: '/research' },
-  { name: 'Cyberange', path: '/cyberrange' },
+  { name: 'CyberRange', path: '/cyberrange' },
   { name: 'Team', path: '/team' },
   { name: 'Collaborators', path: '/collaborators' },
   { name: 'Opportunities', path: '/opportunities' },
@@ -71,7 +73,7 @@ export default function Navbar() {
                 </Link>
               )
             })}
-            <Link to="/contact" className="btn btn-primary navbar__contact-btn">Get in Contact</Link>
+            <Link to="/apply" className="btn btn-primary navbar__contact-btn">Apply Now</Link>
           </nav>
 
           <button className={`navbar__hamburger ${mobileOpen ? 'navbar__hamburger--open' : ''}`} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
@@ -93,7 +95,7 @@ export default function Navbar() {
                 </Link>
               )
             })}
-            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Get in Contact</Link>
+            <Link to="/apply" className="btn btn-primary" style={{ marginTop: 16, width: '100%', justifyContent: 'center' }}>Apply Now</Link>
           </nav>
         </div>
       </div>

@@ -5,28 +5,19 @@ import './CollaboratorsPage.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Global Research Collaborations — institution logos/cards
-const researchCollabs = [
-  { name: 'ETH Zurich', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'Norwegian University of Science and Technology', flag: '🇳🇴', country: 'Norway' },
-  { name: 'University of Lausanne', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'ZHAW Zurich University of Applied Sciences', flag: '🇨🇭', country: 'Switzerland' },
-  { name: 'Technische Hochschule Mittelhessen', flag: '🇩🇪', country: 'Germany' },
-  { name: 'Indian Institute of Technology (BHU) Varanasi', flag: '🇮🇳', country: 'India' },
-  { name: 'Indian Institute of Information Technology Allahabad', flag: '🇮🇳', country: 'India' },
-  { name: 'National Institute of Technology Jalandhar', flag: '🇮🇳', country: 'India' },
-  { name: 'Indian Institute of Information Technology Raipur', flag: '🇮🇳', country: 'India' },
-  { name: 'C3I Hub, IIT Kanpur', flag: '🇮🇳', country: 'India' },
-]
-
-// Industry mentors (same as on Home)
-const industryMentors = [
-  { name: 'Atul Kumar', role: 'Security Architect', initials: 'AK' },
-  { name: 'Vaibhav Shukla', role: 'Threat Intelligence Lead', initials: 'VS' },
-  { name: 'Dr. Amandeep Kapoor', role: 'CISO & Advisor', initials: 'AK' },
-  { name: 'Siddharth Simharaju', role: 'Red Team Specialist', initials: 'SS' },
-  { name: 'Sai Rakshit', role: 'SOC Operations Lead', initials: 'SR' },
-  { name: 'Aseem Shrey', role: 'AppSec Engineer', initials: 'AS' },
+const collaborators = [
+  { name: 'SecureNet Labs', type: 'Industry', desc: 'Leading provider of enterprise network security solutions.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=SecureNet' },
+  { name: 'IIT Bombay Cyber Cell', type: 'Academia', desc: 'Premier academic research cell focusing on cryptography and protocol security.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=IIT+B' },
+  { name: 'DRDO CyberSec Division', type: 'Government', desc: 'National defense research unit specializing in critical infrastructure protection.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=DRDO' },
+  { name: 'Infosys Security Research', type: 'Industry', desc: 'Applied R&D lab focusing on AI-driven threat detection and analysis.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Infosys' },
+  { name: 'CyberPeace Foundation', type: 'NGO', desc: 'Award-winning civil society organization promoting digital peace and cyber hygiene.', link: '#', logo: 'https://placehold.co/120x60/00ff41/000000?text=CyberPeace' },
+  { name: 'ETH Zurich InfoSec', type: 'Academia', desc: 'Department of Computer Science focusing on verifiable security and privacy.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=ETH' },
+  { name: 'CISA Partner Network', type: 'Government', desc: 'Information sharing and analysis center for proactive threat mitigation.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=CISA' },
+  { name: 'Palo Alto Networks', type: 'Industry', desc: 'Collaborating on next-generation firewall technologies and malware sandboxing.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=Palo+Alto' },
+  { name: 'OWASP Foundation', type: 'NGO', desc: 'Open-source software community fostering secure development practices.', link: '#', logo: 'https://placehold.co/120x60/00ff41/000000?text=OWASP' },
+  { name: 'ZHAW Cyber Defence Lab', type: 'Academia', desc: 'Applied sciences university focusing on cyber-physical systems security.', link: '#', logo: 'https://placehold.co/120x60/ff6500/ffffff?text=ZHAW' },
+  { name: 'NTRO Cyber Branch', type: 'Government', desc: 'Technical intelligence agency focused on securing national cyber space.', link: '#', logo: 'https://placehold.co/120x60/0b192c/ffffff?text=NTRO' },
+  { name: 'CrowdStrike Intel', type: 'Industry', desc: 'Elite threat intelligence team collaborating on adversary tracking.', link: '#', logo: 'https://placehold.co/120x60/1e3e62/ffffff?text=CrowdStrike' },
 ]
 
 export default function CollaboratorsPage() {
@@ -35,11 +26,8 @@ export default function CollaboratorsPage() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from('.collab-page-hero', { y: 40, opacity: 0, duration: 0.6, delay: 0.2 })
-      gsap.utils.toArray('.collab-section-title').forEach(el => {
-        gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 85%' }, x: -30, opacity: 0, duration: 0.5 })
-      })
-      gsap.utils.toArray('.card').forEach((el, i) => {
-        gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 88%' }, y: 30, opacity: 0, duration: 0.5, delay: (i % 6) * 0.06 })
+      gsap.utils.toArray('.collab-card-item').forEach((el, i) => {
+        gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 88%' }, y: 30, opacity: 0, duration: 0.5, delay: (i % 4) * 0.1 })
       })
     }, pageRef)
     return () => ctx.revert()
@@ -49,53 +37,26 @@ export default function CollaboratorsPage() {
     <div ref={pageRef} className="page-content">
       <section className="section collab-hero-section" style={{ paddingTop: 140 }}>
         <div className="container">
-          <div className="section-label">// Collaborators</div>
+          <div className="section-label">// Network</div>
           <h1 className="section-title collab-page-hero" style={{ fontSize: 'clamp(36px, 6vw, 64px)' }}>Collaborators</h1>
           <p className="section-subtitle">
-            Our research partners and industry mentors who help drive cybersecurity innovation and training at the lab.
+            Partnering with global leaders across academia, industry, government, and civil society to advance the frontiers of cybersecurity.
           </p>
         </div>
       </section>
 
-      {/* Research Collaborations */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <h2 className="collab-section-title">Research Collaborations</h2>
-          <p className="section-subtitle" style={{ marginBottom: 32 }}>
-            Partnering with leading institutions worldwide to advance cybersecurity research and education.
-          </p>
-          <div className="container"><div className="section-divider" style={{ marginBottom: 32 }} /></div>
-          <div className="grid-5">
-            {researchCollabs.map((c, i) => (
-              <div key={i} className="card collab-card">
-                <span className="collab-flag">{c.flag}</span>
-                <h4 className="collab-name">{c.name}</h4>
-                <span className="collab-country">{c.country}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="container"><div className="section-divider" /></div>
-
-      {/* Industry Mentors */}
-      <section className="section">
-        <div className="container">
-          <h2 className="collab-section-title">Industry Mentors</h2>
-          <p className="section-subtitle" style={{ marginBottom: 32 }}>
-            Mentors from leading cybersecurity organizations bringing real-world experience to the lab.
-          </p>
-          <div className="container"><div className="section-divider" style={{ marginBottom: 32 }} /></div>
-          <div className="grid-3">
-            {industryMentors.map((m, i) => (
-              <div key={i} className="card mentor-card">
-                <div className="avatar">{m.initials}</div>
-                <div>
-                  <h4 className="mentor-name">{m.name}</h4>
-                  <span className="mentor-role">{m.role}</span>
+          <div className="grid-4 collab-cards-grid">
+            {collaborators.map((c, i) => (
+              <a key={i} href={c.link} className="card collab-card-item" style={{ display: 'flex', flexDirection: 'column' }}>
+                <img src={c.logo} alt={c.name} style={{ width: 120, height: 60, objectFit: 'cover', marginBottom: 20, borderRadius: 4 }} />
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12, gap: 8 }}>
+                  <h4 style={{ fontSize: 18, margin: 0, color: '#fff' }}>{c.name}</h4>
                 </div>
-              </div>
+                <span className="badge" style={{ alignSelf: 'flex-start', marginBottom: 16 }}>{c.type}</span>
+                <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.5, flexGrow: 1 }}>{c.desc}</p>
+              </a>
             ))}
           </div>
         </div>
