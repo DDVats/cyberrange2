@@ -1,0 +1,61 @@
+.training-hero-section {
+  background: var(--dark-navy);
+}
+
+.training-stats {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+.tracks-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.tracks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.track-pill {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: rgba(255,101,0,0.1);
+  border: 1px solid rgba(255,101,0,0.25);
+  color: var(--orange);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.program-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.prog-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}

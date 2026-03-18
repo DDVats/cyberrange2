@@ -1,0 +1,47 @@
+.services-hero-section {
+  background: var(--dark-navy);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.service-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.service-link {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--orange);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.25s ease;
+  margin-top: auto;
+}
+
+.service-link:hover {
+  gap: 12px;
+}

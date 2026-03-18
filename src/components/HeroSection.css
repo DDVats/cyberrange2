@@ -134,6 +134,13 @@
 @media (max-width: 768px) {
   .hero__content { padding: 120px 0 80px; }
   .hero-sub { font-size: 16px; }
+  .hero-title { font-size: clamp(32px, 8vw, 48px); }
   .stats-bar__inner { flex-wrap: wrap; gap: 16px; }
   .stat { min-width: 40%; }
+}
+
+@media (max-width: 480px) {
+  .hero__btns { flex-direction: column; width: 100%; }
+  .hero__btns .btn { width: 100%; justify-content: center; }
+  .stat { min-width: 100%; }
 }
