@@ -146,12 +146,6 @@ export default function ApplyPage() {
                 </select>
               </div>
 
-              <h3 className="form-section-title" style={{ marginTop: 32 }}>Uploads</h3>
-              <div className="form-group">
-                <label className="form-label">Upload Resume/CV (PDF only)</label>
-                <input type="file" name="resume" accept=".pdf" className="form-file-input" />
-              </div>
-
               <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: 32, justifyContent: 'center', padding: '16px' }}>Submit Application</button>
             </form>
           )}
