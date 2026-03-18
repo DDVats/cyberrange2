@@ -97,7 +97,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          <Link to="/opportunities" className="btn btn-primary navbar__contact-btn">Apply Now</Link>
+          <Link to="/apply" className="btn btn-primary navbar__contact-btn">Apply Now</Link>
 
           <button className={`navbar__hamburger ${mobileOpen ? 'navbar__hamburger--open' : ''}`} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
             <span /><span /><span />
